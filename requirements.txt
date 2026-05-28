@@ -5,6 +5,8 @@ ipykernel
 matplotlib
 scikit-learn
 catboost
+pickle
+Flask
 xgboost
 dill
 -e .
