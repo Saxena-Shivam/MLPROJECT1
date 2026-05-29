@@ -1,1 +1,91 @@
-<h1>Welcome to the home page</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Performance Home</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+  </head>
+  <body>
+    <div class="page-shell">
+      <div class="container">
+        <header class="topbar">
+          <a class="brand" href="{{ url_for('index') }}">
+            <span class="brand-mark">SP</span>
+            Student Performance
+          </a>
+          <a
+            class="button button-secondary"
+            href="{{ url_for('predict_datapoint') }}"
+            >Open Predictor</a
+          >
+        </header>
+
+        <div class="hero-grid">
+          <section class="hero-panel">
+            <span class="eyebrow">Machine learning demo</span>
+            <h1>Welcome to the home page</h1>
+            <p>
+              Use this project to explore a simple student exam performance
+              model and launch the prediction form when you are ready.
+            </p>
+
+            <div class="hero-actions">
+              <a
+                class="button button-primary"
+                href="{{ url_for('predict_datapoint') }}"
+                >Start prediction</a
+              >
+              <a
+                class="button button-secondary"
+                href="{{ url_for('predict_datapoint') }}"
+                >View form</a
+              >
+            </div>
+
+            <div class="stats-grid">
+              <div class="stat-card">
+                <strong>6</strong>
+                <span>Student attributes used for prediction.</span>
+              </div>
+              <div class="stat-card">
+                <strong>1</strong>
+                <span>Model output returned from Flask.</span>
+              </div>
+              <div class="stat-card">
+                <strong>100</strong>
+                <span>Score scale used by the exam inputs.</span>
+              </div>
+            </div>
+          </section>
+
+          <aside class="side-stack">
+            <section class="info-panel">
+              <h2>Project overview</h2>
+              <p>
+                This app predicts a student's math performance from basic
+                demographic and preparation details.
+              </p>
+              <ul class="feature-list">
+                <li>Simple landing page for the project entry point.</li>
+                <li>Direct navigation to the prediction form.</li>
+                <li>Consistent visual system shared with the form page.</li>
+              </ul>
+            </section>
+
+            <section class="info-panel">
+              <h2>Next step</h2>
+              <p>
+                Click the predictor button to open the form and generate a score
+                estimate.
+              </p>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
